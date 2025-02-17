@@ -152,8 +152,7 @@ class ReportController extends Controller
             if (! $result = $this->model->getReport($id)) {
                 error('编辑的内容已经不存在！', - 1);
             }
-            $this->assign('gids', $this->model->getGid());
-            $this->assign('link', $result);
+            $this->assign('report', $result);
             $this->display('content/report.html');
         }
     }
