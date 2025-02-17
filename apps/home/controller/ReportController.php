@@ -5,7 +5,7 @@ use core\basic\Controller;
 use app\home\model\ParserModel;
 use core\basic\Url;
 
-class MessageController extends Controller
+class ReportController extends Controller
 {
     protected $model;
 
