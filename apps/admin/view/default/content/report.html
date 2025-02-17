@@ -15,7 +15,7 @@
                             <th>编号</th>
                             <th>名称</th>
                             <th>关键字</th>
-                            <th>链接</th>
+                            <th>图片</th>
                             <th>操作</th>
                         </tr>
                     </thead>
@@ -25,7 +25,7 @@
                             <td>[value->no]</td>
                             <td>[value->name]</td>
                             <td>[value->keyword]</td>
-                            <td>[value->path]</td>
+                            <td><img src="{SITE_DIR}[value->path]" style="height:20px;"></td>
                             <td>
                                 {fun=get_btn_del($value->id)}
                                 {fun=get_btn_mod($value->id)}
@@ -57,14 +57,15 @@
                     </div>
 
                     <div class="layui-form-item">
-                        <label class="layui-form-label">附件</label>
+                        <label class="layui-form-label">图片</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="path" id="path" placeholder="请上传PDF" class="layui-input">
+                            <input type="text" name="path" id="path" placeholder="请上传图片"  class="layui-input">
                         </div>
-                        <button type="button" class="layui-btn file" data-des="path">
-                            <i class="layui-icon">&#xe67c;</i>上传文件
+                        <button type="button" class="layui-btn upload" data-des="path">
+                             <i class="layui-icon">&#xe67c;</i>上传图片
                         </button>
-                    </div>
+                        <div id="logo_box" class="pic"></div>
+                   </div>
 
                     <div class="layui-form-item">
                         <div class="layui-input-block">
@@ -106,14 +107,15 @@
                     </div>
 
                     <div class="layui-form-item">
-                        <label class="layui-form-label">附件</label>
+                        <label class="layui-form-label">图片</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="path" id="path" value="{$report->path}" placeholder="请上传PDF" class="layui-input">
+                            <input type="text" name="path" id="path" placeholder="请上传图片" value="{$report->path}" class="layui-input">
                         </div>
-                        <button type="button" class="layui-btn file" data-des="path">
-                            <i class="layui-icon">&#xe67c;</i>上传文件
+                        <button type="button" class="layui-btn upload" data-des="path">
+                             <i class="layui-icon">&#xe67c;</i>上传图片
                         </button>
-                    </div>
+                        <div id="logo_box" class="pic"></div>
+                   </div>
 
                     <div class="layui-form-item">
                         <div class="layui-input-block">
