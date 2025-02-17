@@ -34,14 +34,14 @@ class ReportController extends Controller
 
     public function add()
     {
-        $this->log(json_encode($_POST));
-        if (!empty(($_POST))) {
+        if (empty(($_POST))) {
+            alert_back('请添加报告！');
             return;
         }
 
         $name = post('name');
         $path = post('path');
-        $logo = post('no');
+        $no = post('no');
 
         if (!$name) {
             alert_back('名称不能为空！');
@@ -62,7 +62,9 @@ class ReportController extends Controller
         // 构建数据
         $data = array(
             // 'acode' => session('acode'),
+            'no' => $no,
             'name' => $name,
+            'keyword' => post('keyword'),
             'path' => $path,
             'create_user' => session('username'),
             'update_user' => session('username')
