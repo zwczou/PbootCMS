@@ -41,6 +41,14 @@
                     <input type="hidden" name="formcheck" value="{$formcheck}">
 
                     <div class="layui-form-item">
+                        <label class="layui-form-label">编号</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="no" required lay-verify="required" placeholder="请输入编号"
+                                class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
                         <label class="layui-form-label">名称</label>
                         <div class="layui-input-block">
                             <input type="text" name="name" required lay-verify="required" placeholder="请输入名称"
@@ -89,6 +97,13 @@
                 <form action="{url./admin/Report/mod/id/'.[$get.id].'}{$backurl}" method="post" class="layui-form">
                     <input type="hidden" name="formcheck" value="{$formcheck}">
 
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">编号</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="no" required lay-verify="required" value="{$report->no}" placeholder="请输入编号"
+                                class="layui-input">
+                        </div>
+                    </div>
 
                     <div class="layui-form-item">
                         <label class="layui-form-label">名称</label>
