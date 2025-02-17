@@ -810,6 +810,12 @@ class ParserModel extends Model
         }
     }
 
+    // getReport 获取报告
+    public function getReport($no)
+    {
+        return parent::table('ay_report')->where("no='$no'")->find();
+    }
+
     // 新增留言
     public function addMessage($data)
     {
