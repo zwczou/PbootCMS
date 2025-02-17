@@ -69,7 +69,7 @@ class ReportController extends Controller
         );
 
         // 执行添加
-        if ($this->model->addLink($data)) {
+        if ($this->model->addReport($data)) {
             $this->log('新增报告成功！');
             if (!!$backurl = get('backurl')) {
                 success('新增成功！', base64_decode($backurl));
