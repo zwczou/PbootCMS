@@ -5,7 +5,7 @@ namespace app\admin\model\content;
 
 use core\basic\Model;
 
-class MessageModel extends Model
+class ReportModel  extends Model
 {
     public function getList($page = true)
     {
