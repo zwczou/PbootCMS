@@ -29,4 +29,13 @@ class ReportModel  extends Model
         return parent::table('ay_report')->autoTime()->insert($data);
     }
 
+    public function delReport($id)
+    {
+        return parent::table('ay_report')->where("id=$id")->delete();
+    }
+
+    public function modReport($id, $data)
+    {
+        return parent::table('ay_report')->where("id=$id")->update($data);
+    }
 }

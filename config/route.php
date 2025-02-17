@@ -6,5 +6,7 @@ return array(
         // URL地址路由，如后台站点信息控制器：'admin/Site' => 'admin/content.Site',
         'admin/Report/index' => 'admin/content.Report/index',
         'admin/Report/add' => 'admin/content.Report/add',
+        'admin/Report/mod' => 'admin/content.Report/mod',
+        'admin/Report/del' => 'admin/content.Report/del',
     )
 );
