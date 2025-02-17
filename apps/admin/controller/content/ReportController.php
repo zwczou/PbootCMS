@@ -101,9 +101,13 @@ class ReportController extends Controller
 
     public function mod()
     {
+
+        if (! $id = get('id', 'int')) {
+            error('传递的参数值错误！', - 1);
+        }
+
         // 修改操作
         if ($_POST) {
-            
             // 获取数据
             $no = post('no');
             $name = post('name');
