@@ -8,5 +8,6 @@ return array(
         'admin/Report/add' => 'admin/content.Report/add',
         'admin/Report/mod' => 'admin/content.Report/mod',
         'admin/Report/del' => 'admin/content.Report/del',
+        'report/get' => 'home/Report/get',
     )
 );
